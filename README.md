@@ -1,2 +1,2 @@
-# 0xIP
+# ZEIPs
 0x Improvement Proposals
