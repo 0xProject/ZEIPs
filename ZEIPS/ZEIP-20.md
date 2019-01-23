@@ -8,7 +8,7 @@
     Status: Final
     Created: 2018-01-13
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow traders to very cheaply cancel multiple orders in a single transaction with a single state update.
 

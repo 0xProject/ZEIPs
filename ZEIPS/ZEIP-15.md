@@ -8,7 +8,7 @@
     Status: Final
     Created: 2017-12-15
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Improve gas effeciency by only validating signatures once.
 

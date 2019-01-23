@@ -8,7 +8,7 @@
     Status: Final
     Created: 2017-04-25
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow smart contracts to generate orders to be used in 0x protocol.
 

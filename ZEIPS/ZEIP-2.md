@@ -8,7 +8,7 @@
     Status: Final
     Created: 2017-07-07
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow a pair of opposing orders to be matched without upfront capital.
 

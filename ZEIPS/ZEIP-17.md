@@ -9,7 +9,7 @@
     Created: 2017-12-20
     Requires: EIP712
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow the signer to see 0x order data when signing in supported wallets.
 

@@ -8,7 +8,7 @@
     Status: Final
     Created: 2018-01-01
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Replace the transfer validity check `isTransferable` with a more succint implementation using `delegatecall`. `isTransferable` has caused issues in the past and is expensive.
 

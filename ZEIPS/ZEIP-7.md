@@ -8,7 +8,7 @@
     Status: Final
     Created: 2017-09-16
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow contracts to create orders without the use of signatures.
 

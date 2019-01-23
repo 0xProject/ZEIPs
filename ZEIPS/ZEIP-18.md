@@ -8,7 +8,7 @@
     Status: Final
     Created: 2018-01-18
 
-## Simple Summary (2 Sentences)
+## Simple Summary
 
 Allow fills and other 0x operations to be submitted by a third party (e.g Relayers or contracts).
 
