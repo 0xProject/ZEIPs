@@ -8,6 +8,8 @@
 
 | Title                                                                                                                       | Number | Version Included |
 | --------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
+| [ERC20BridgeProxy](https://github.com/0xProject/ZEIPs/issues/47)                                                            | 47     | 3.0.0            |
+| [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
 | [Allow for mass order cancellations based on `salt` value](https://github.com/0xProject/ZEIPs/issues/20)                    | 20     | 2.0.0            |
 | [Replace `isTransferable` with `fillOrder` variant that uses `delegatecall`](https://github.com/0xProject/ZEIPs/issues/19)  | 19     | 2.0.0            |
 | [Allow `taker` to be different from `sender` with optional `taker` signature](https://github.com/0xProject/ZEIPs/issues/18) | 18     | 2.0.0            |
@@ -16,4 +18,3 @@
 | [On-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/7)                                 | 7      | 2.0.0            |
 | [Atomic order matching](https://github.com/0xProject/ZEIPs/issues/2)                                                        | 2      | 2.0.0            |
 | [Off-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/1)                                | 1      | 2.0.0            |
-| [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
