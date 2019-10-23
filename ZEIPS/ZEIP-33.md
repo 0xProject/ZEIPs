@@ -4,7 +4,7 @@
     Title: New/Consolidated Signature Type(s) and Behavior
     Author: 0x Core Team
     Type: Standard Track
-    Category (*only required for Standard Track): Core
+    Category: Core
     Status: Final
     Created: 2019-04-19
 
@@ -16,11 +16,11 @@ Introduce new signature types for orders and  and change validation behavior.
 
 ## Abstract
 
-Add more robust order and transaction signature validation with the following signature types:
+Add more robust order and transaction signature validation with the following callback signature types, which accept an entire `Order` or `ZeroExTransaction` object:
 - `Validator` (**replaces existing behavior*)
 - `EIP1271Wallet`
 
-Starting in 3.0, *all* signature types (including these) will be checked on every fill. This is in contrast to the behavior in `2.0` where we only validate the signature on the first fill.
+Also, *all* signature types (including these) will be checked on every fill. This is in contrast to the behavior in `2.0` where we only validate the signature on the first fill.
 
 ## Motivation
 
