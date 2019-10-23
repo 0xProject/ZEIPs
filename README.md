@@ -8,6 +8,8 @@
 
 | Title                                                                                                                       | Number | Version Included |
 | --------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
+| [Mixed assets in "market" operations](https://github.com/0xProject/ZEIPs/issues/59)                                         | 59     | 3.0.0            |
+| [marketBuy/SellOrdersFillOrKill](https://github.com/0xProject/ZEIPs/issues/50)                                              | 50     | 3.0.0            |
 | [ERC20BridgeProxy](https://github.com/0xProject/ZEIPs/issues/47)                                                            | 47     | 3.0.0            |
 | [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
 | [Rich Reverts](https://github.com/0xProject/ZEIPs/issues/32)                                                                | 32     | 3.0.0            |
@@ -20,4 +22,3 @@
 | [On-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/7)                                 | 7      | 2.0.0            |
 | [Atomic order matching](https://github.com/0xProject/ZEIPs/issues/2)                                                        | 2      | 2.0.0            |
 | [Off-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/1)                                | 1      | 2.0.0            |
-| [marketBuy/SellOrdersFillOrKill](https://github.com/0xProject/ZEIPs/issues/50)                                              | 50     | 3.0.0            |
