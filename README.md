@@ -11,6 +11,7 @@
 | [Mixed assets in "market" operations](https://github.com/0xProject/ZEIPs/issues/59)                                         | 59     | 3.0.0            |
 | [marketBuy/SellOrdersFillOrKill](https://github.com/0xProject/ZEIPs/issues/50)                                              | 50     | 3.0.0            |
 | [ERC20BridgeProxy](https://github.com/0xProject/ZEIPs/issues/47)                                                            | 47     | 3.0.0            |
+| [Permissive Order Cancellations](https://github.com/0xProject/ZEIPs/issues/35)                                              | 35     | 3.0.0            |
 | [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
 | [Rich Reverts](https://github.com/0xProject/ZEIPs/issues/32)                                                                | 32     | 3.0.0            |
 | [Arbitrary fee tokens](https://github.com/0xProject/ZEIPs/issues/28)                                                        | 28     | 3.0.0            |
