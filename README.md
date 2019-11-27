@@ -16,6 +16,7 @@
 | [Permissive Order Cancellations](https://github.com/0xProject/ZEIPs/issues/35)                                              | 35     | 3.0.0            |
 | [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
 | [Rich Reverts](https://github.com/0xProject/ZEIPs/issues/32)                                                                | 32     | 3.0.0            |
+| [Stake-based Liquidity Incentives](https://github.com/0xProject/ZEIPs/issues/31)                                            | 31     | 3.0.0            |
 | [Arbitrary fee tokens](https://github.com/0xProject/ZEIPs/issues/28)                                                        | 28     | 3.0.0            |
 | [Allow for mass order cancellations based on `salt` value](https://github.com/0xProject/ZEIPs/issues/20)                    | 20     | 2.0.0            |
 | [Replace `isTransferable` with `fillOrder` variant that uses `delegatecall`](https://github.com/0xProject/ZEIPs/issues/19)  | 19     | 2.0.0            |
