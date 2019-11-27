@@ -16,3 +16,4 @@
 | [On-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/7)                                 | 7      | 2.0.0            |
 | [Atomic order matching](https://github.com/0xProject/ZEIPs/issues/2)                                                        | 2      | 2.0.0            |
 | [Off-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/1)                                | 1      | 2.0.0            |
+| [New/Consolidated Signature Type(s) and Behavior](https://github.com/0xProject/ZEIPs/issues/33)                             | 33     | 3.0.0            |
