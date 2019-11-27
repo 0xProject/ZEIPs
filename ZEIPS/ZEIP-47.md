@@ -64,23 +64,23 @@ interface IERC20Bridge {
 
 1. Order is created with `makerAddress` as the `IERC20Bridge` contract, with a `Wallet` signature type.
 2. Taker calls `fillOrder()` on this order.
-    1. taker tokens are transferred from taker to maker (`IERC20Bridge`).
-    2. `ERC20BridgeProxy.transferFrom()` is invoked to transfer `amount` of maker tokens to the taker.
-        1. `ERC20BridgeProxy` uses `IERC20(makerToken).balanceOf()` to get the maker token balance of the taker.
-        2. `ERC20BridgeProxy` calls `bridgeContract.bridgeTransferFrom()`.
-            1. `IERC20Bridge` interacts with on-chain liquidity sources to swap taker tokens for maker tokens and sending them to the taker.
-        4. If `bridgeContract.bridgeTransferFrom()` does not return the magic value `0xb5d40d78`, revert.
-        5. If the maker token balance of the taker has not increased by at least `amount`, revert.
-    3. Taker now has maker tokens!
+   1. taker tokens are transferred from taker to maker (`IERC20Bridge`).
+   2. `ERC20BridgeProxy.transferFrom()` is invoked to transfer `amount` of maker tokens to the taker.
+      1. `ERC20BridgeProxy` uses `IERC20(makerToken).balanceOf()` to get the maker token balance of the taker.
+      2. `ERC20BridgeProxy` calls `bridgeContract.bridgeTransferFrom()`.
+         1. `IERC20Bridge` interacts with on-chain liquidity sources to swap taker tokens for maker tokens and sending them to the taker.
+      3. If `bridgeContract.bridgeTransferFrom()` does not return the magic value `0xb5d40d78`, revert.
+      4. If the maker token balance of the taker has not increased by at least `amount`, revert.
+   3. Taker now has maker tokens!
 
 ## Pros and Cons
 
 ### PROS
 
-* It’s much easier to roll out support for more liquidity sources using this pattern.
-* Anyone can create a buyer contract for use with this asset proxy.
-* Buyer contracts have extreme flexibility with what they can do. We might see some really novel use cases.
-* Neither the asset proxy nor buyer contracts are granted allowances in this pattern, so they can’t spend funds they don’t have.
+- It’s much easier to roll out support for more liquidity sources using this pattern.
+- Anyone can create a buyer contract for use with this asset proxy.
+- Buyer contracts have extreme flexibility with what they can do. We might see some really novel use cases.
+- Neither the asset proxy nor buyer contracts are granted allowances in this pattern, so they can’t spend funds they don’t have.
 
 ## Implementation
 

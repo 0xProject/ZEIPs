@@ -26,19 +26,15 @@ This will improve the reliability of cancelling batches of specific orders.
 
 The table below compares how failure scenarios are handled when cancelling an order.
 
-|Scenario|Current Action|Proposed Action|
-|--|--|--|
-|Reentrancy|Revert|Revert|
-|Sender Not Authorized|Revert|Revert|
-|Order Expired|Revert|No-op|
-|Order Already Cancelled|Revert|No-op|
-|Order Already Filled|Revert|No-op|
-|Order Invalid|Revert|No-op|
+| Scenario                | Current Action | Proposed Action |
+| ----------------------- | -------------- | --------------- |
+| Reentrancy              | Revert         | Revert          |
+| Sender Not Authorized   | Revert         | Revert          |
+| Order Expired           | Revert         | No-op           |
+| Order Already Cancelled | Revert         | No-op           |
+| Order Already Filled    | Revert         | No-op           |
+| Order Invalid           | Revert         | No-op           |
 
 ## Copyright
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-
-
-

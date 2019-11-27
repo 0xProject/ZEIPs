@@ -9,6 +9,7 @@
     Created: 2019-04-19
 
 ## Simple Summary
+
 Instead of throwing opaque string reverts, 3.0 contracts will instead throw custom, ABI-encoded "rich" revert types augmented with much more useful parameters.
 
 ## Motivation
@@ -20,9 +21,11 @@ Additionally, this is a critical step towards our goal of becoming a language-ag
 ## Specification
 
 #### Encoding
+
 Standard string reverts (à la Soldity's `require()` and `revert()` builtins) are ABI-encoded as a function call with signature `Error(string)`.
 
 For example, a `revert("foobar")` would encode as:
+
 ```yaml
 # 4-byte function selector (keccak of "Error(string)")
 08c379a0
@@ -38,11 +41,13 @@ For example, a `revert("foobar")` would encode as:
 Our rich reverts follow the same encoding rules but with varying function signatures.
 
 For example, the rich revert `SignatureError` has the signature:
+
 ```solidity
 SignatureError(uint8 errorCode, bytes32 hash, address signer, bytes signature)
 ```
 
 If we construct it with the following values:
+
 ```solidity
 SignatureError(
     // errorCode
@@ -59,6 +64,7 @@ SignatureError(
 ```
 
 The resulting encoding will be:
+
 ```yaml
 # 4-byte function selector (keccak of "SignatureError(uint8,bytes32,address,bytes)")
 7e5a2318
@@ -78,6 +84,7 @@ a3dcd8f6179b531a8c33b675b700708090d4e94d6f6f4cd9e652239a6225db45
 ```
 
 #### Decoding
+
 Nodes will only return revert data for `eth_call` operations, though it is possible (but not foolproof) to replay a failed transaction using `eth_call` and a block number.
 
 Furthermore, with geth there is an [issue](https://github.com/ethereum/go-ethereum/issues/19027) where the JSON-RPC response for a successful `eth_call` is indistinguishable from a revert. For this reason, (at minimum) we need to check the leading 4 bytes of the return data against a mapping of known error selectors to detect that a revert actually occurred. This is a little inelegant, but with roughly 4 billion combinations of leading 4 bytes, combined with more rigorous conformance checks, false positives should be extremely rare.

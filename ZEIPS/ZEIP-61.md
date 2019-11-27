@@ -13,17 +13,18 @@ Created: 2019-10-29
 Discussion: #61
 
 ## Summary
+
 This proposal outlines the initial parameters for stake-based liquidity incentives. Parameters are upgradeable via a vote by the ZRX token holders. See [ZEIP 31](https://github.com/0xProject/ZEIPs/issues/31) for the original stake-based liquidity incentives proposal, and the [0x Staking Specification](https://github.com/0xProject/0x-protocol-specification/blob/3.0/staking/staking-specification.md) for the most up-to-date information on architecture, implementation and usage.
 
 ## Specification
 
-|Parameter|Value|
-|--|--|
-|α (alpha)|2/3|
-|Epoch Length|10 days|
-|Minimum Stake|100 ZRX|
-|Delegated Stake Weight|90%|
-|Protocol Fee Multiplier|150,000|
+| Parameter               | Value   |
+| ----------------------- | ------- |
+| α (alpha)               | 2/3     |
+| Epoch Length            | 10 days |
+| Minimum Stake           | 100 ZRX |
+| Delegated Stake Weight  | 90%     |
+| Protocol Fee Multiplier | 150,000 |
 
 ## Rationale
 

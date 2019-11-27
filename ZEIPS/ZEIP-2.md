@@ -22,13 +22,13 @@ Currently, order matching of limit orders is supported through use of `batchFill
 
 Add a `matchOrders` function that will atomically fill valid crossing orders without requiring capital upfront. This will lower the barriers to entry of running a centralized matching engine and of arbitraging across exchanges. The requirements of this function would be:
 
--   Takes 2 orders as input parameters
--   `orderA.makerToken` == `orderB.takerToken`
--   `orderA.takerToken` == `orderB.makerToken`
--   `msg.sender` is a valid taker for both orders
--   Prices of both orders cross each other
--   Makers of both orders receive amounts specified by orders
--   `msg.sender` keeps the difference
+- Takes 2 orders as input parameters
+- `orderA.makerToken` == `orderB.takerToken`
+- `orderA.takerToken` == `orderB.makerToken`
+- `msg.sender` is a valid taker for both orders
+- Prices of both orders cross each other
+- Makers of both orders receive amounts specified by orders
+- `msg.sender` keeps the difference
 
 ## Rationale
 
