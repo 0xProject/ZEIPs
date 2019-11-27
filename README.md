@@ -8,6 +8,7 @@
 
 | Title                                                                                                                       | Number | Version Included |
 | --------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------- |
+| [Initial Staking Parameters](https://github.com/0xProject/ZEIPs/issues/61)                                                  | 61     | 3.0.0            |
 | [Mixed assets in "market" operations](https://github.com/0xProject/ZEIPs/issues/59)                                         | 59     | 3.0.0            |
 | [marketBuy/SellOrdersFillOrKill](https://github.com/0xProject/ZEIPs/issues/50)                                              | 50     | 3.0.0            |
 | [ERC20BridgeProxy](https://github.com/0xProject/ZEIPs/issues/47)                                                            | 47     | 3.0.0            |
