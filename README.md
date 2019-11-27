@@ -18,3 +18,4 @@
 | [On-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/7)                                 | 7      | 2.0.0            |
 | [Atomic order matching](https://github.com/0xProject/ZEIPs/issues/2)                                                        | 2      | 2.0.0            |
 | [Off-chain order generation by smart contracts](https://github.com/0xProject/ZEIPs/issues/1)                                | 1      | 2.0.0            |
+| [Arbitrary fee tokens](https://github.com/0xProject/ZEIPs/issues/28)                                                        | 28     | 3.0.0            |
