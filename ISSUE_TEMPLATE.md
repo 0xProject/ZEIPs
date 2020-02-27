@@ -1,5 +1,3 @@
-This is the suggested template for 0x related issues. 
-
 ## Summary ( 2-5 Sentences )
 "If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the issue.
 
