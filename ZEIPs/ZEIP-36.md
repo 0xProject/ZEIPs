@@ -13,9 +13,11 @@ Created: 2019-10-29
 Discussion: #36
 
 ## Summary
+
 The Exchange contract currently only allows for a single 0x transaction to be executed atomically. This proposal would add the ability to atomically execute a batch of transactions by calling a single function.
 
 ## Motivation
+
 There are niche use cases for composing custom a custom series of Exchange function calls. One example:
 
 1. A maker places a buy order on market A
@@ -23,6 +25,7 @@ There are niche use cases for composing custom a custom series of Exchange funct
 3. The maker would like to atomically fill the sell order and cancel the buy order, rather than executing the transactions asynchronously and risking that only one of the transactions is successful.
 
 ## Specification
+
 A naive solution is extremely simple to implement and adds no additional attack surface:
 
 ```

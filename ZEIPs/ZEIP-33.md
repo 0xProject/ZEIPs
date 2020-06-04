@@ -12,15 +12,16 @@ Discussion: #33
 
 ## Simple Summary
 
-Introduce new signature types for orders and  and change validation behavior.
+Introduce new signature types for orders and and change validation behavior.
 
 ## Abstract
 
 Add more robust order and transaction signature validation with the following callback signature types, which accept an entire `Order` or `ZeroExTransaction` object:
-- `Validator` (**replaces existing behavior*)
+
+- `Validator` (\*_replaces existing behavior_)
 - `EIP1271Wallet`
 
-Also, *all* signature types (including these) will be checked on every fill. This is in contrast to the behavior in `2.0` where we only validate the signature on the first fill.
+Also, _all_ signature types (including these) will be checked on every fill. This is in contrast to the behavior in `2.0` where we only validate the signature on the first fill.
 
 ## Motivation
 
@@ -31,10 +32,12 @@ Recent improvements to solidity and `ABIEncoderV2` have made this approach relat
 ## Specification
 
 ### Restrictions
+
 - Validator contracts will be called via `staticcall()`. If the contract attempts to update state during call, the validation will fail.
 - Validator contracts using the `Validator` signature type must be registered in advance via `setSignatureValidatorApproval()` (unchanged from `2.0`). This only has to be done once per validator-signer pair.
 
 ### Signature Encoding
+
 The `Validator` signature type is tightly packed with the ordered fields:
 
 ```solidity
@@ -56,6 +59,7 @@ uint8 signatureType
 ```
 
 ### Implementation
+
 Contracts validating the `Validator` and `EIP1271` signature types follow the EIP-1271 pattern and must expose the following callback:
 
 ```solidity
@@ -72,12 +76,16 @@ function isValidSignature(
 ```
 
 #### EIP-1271 `data` Encoding
+
 There are two ways the `data` parameter for `EIP1271Wallet` and `Validator` signatures can be encoded, depending on what type of data is signed:
+
 - For Orders: `abi.encodeWithSelector(bytes4(0x3efe50c8), Order order, bytes32 orderHash)`
 - For ZeroExTransactions: `abi.encodeWithSelector(bytes4(0xde047db4), ZeroExTransaction transaction, bytes32 transactionHash)`
 
 #### Example
+
 Here is a complete (if trivial) implementation that validates an Order signature:
+
 ```solidity
 pragma solidity ^0.5.9;
 pragma experimental ABIEncoderV2;

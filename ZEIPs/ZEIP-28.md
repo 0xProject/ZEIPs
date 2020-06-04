@@ -27,10 +27,11 @@ This also allows all relayers, not just matching relayers to take percentage fee
 ## Specification
 
 Add two new fields to the order schema:
+
 - `makerFeeAssetData`: The fee asset to be paid by the maker on fill.
 - `takerFeeAssetData`: The fee asset to be paid by the taker on fill.
 
-In `_settleOrder()` and `_settleMatchedOrders()`, transfer maker and taker fees to the fee recipients *after* transfering maker and taker assets (in case the main assets would help cover the fees).
+In `_settleOrder()` and `_settleMatchedOrders()`, transfer maker and taker fees to the fee recipients _after_ transfering maker and taker assets (in case the main assets would help cover the fees).
 
 ## Copyright
 

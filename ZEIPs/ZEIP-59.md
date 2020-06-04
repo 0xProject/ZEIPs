@@ -11,12 +11,15 @@
 Discussion: #59
 
 ## Summary
+
 Remove the restriction of all orders sharing the same maker or taker asset data in `marketBuy...()` and `marketSell...()` functions.
 
 ## Motivation
+
 The V3 world is evolving into one where the same asset can be represented by different asset data encodings. A good example would be with the new Bridge (#47) proxies, which can exchange any ERC20 token but can also carry arbitrary payloads in its asset data.
 
 ## Specification
+
 In V2, we copied the `makerAssetData` (in the case of a `marketBuy...()`) or the `takerAssetData` (in the case of `marketSell...()`) to each subsequent order passed into the market functions. This essentially enforced homogenous asset types across all orders.
 
 Going forward, we will simply no longer perform this copy, and fill orders as usual, continuing

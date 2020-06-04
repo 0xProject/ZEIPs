@@ -20,9 +20,9 @@ In the current implementation of the Exchange contract, the taker of an order is
 
 This change would allow for much easier implementations of `Exchange` wrapper contracts. Wrapper contracts are currently impractical because they are required to hold the taker's tokens that will be exchanged. Some basic use cases for wrapper contracts include:
 
--   creating orders that can only be filled by addresses in a whitelist
--   creating orders that can only be filled with a signature from another party
--   creating custom functions for conditionally filling multiple orders (similar to `batchFillOrders` or `fillOrdersUpTo`)
+- creating orders that can only be filled by addresses in a whitelist
+- creating orders that can only be filled with a signature from another party
+- creating custom functions for conditionally filling multiple orders (similar to `batchFillOrders` or `fillOrdersUpTo`)
 
 In addition, this change greatly simplifies logic for relayers using the [matching strategy](https://0xproject.com/wiki#Matching). There is now a clear distinction between the `maker` and `taker` of an order in this model, simplifying logic for calculating fees. Tokens will also be swapped directly from the `maker` to `taker`, which results in fewer intermediate state changes and lower gas costs.
 

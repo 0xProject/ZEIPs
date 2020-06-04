@@ -137,4 +137,4 @@ return batchMatchResults
 
 ## Notes
 
-* Redundant asset data can be optimized out by the [0x ABI Encoder](https://github.com/0xProject/0x-monorepo/tree/development/packages/utils/src/abi_encoder)
+- Redundant asset data can be optimized out by the [0x ABI Encoder](https://github.com/0xProject/0x-monorepo/tree/development/packages/utils/src/abi_encoder)
